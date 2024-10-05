@@ -81,7 +81,7 @@ const CurrencySelector = () => {
       <button
         onClick={toggleDarkMode}
         className={`mb-5 px-4 py-2 rounded ${
-          isDarkMode ? "bg-gray-600" : "bg-gray-300"
+          isDarkMode ? "bg-gray-600" : "bg-gray-300 hover:bg-gray-400"
         }`}
       >
         Dark Mode
@@ -98,12 +98,12 @@ const CurrencySelector = () => {
           isDarkMode={isDarkMode} // Pass isDarkMode to the dropdown
         />
 
-        <div className="flex justify-center -mb-5">
+        <div className="flex justify-center -mb-1">
           <button
             onClick={swapCurrencies}
-            className="p-2 bg-gray-200 rounded-full cursor-pointer hover:bg-gray-300"
+            className="p-2 bg-cyan-600 rounded-full cursor-pointer hover:bg-cyan-500"
           >
-            <HiArrowsRightLeft className="text-xl" />
+            <HiArrowsRightLeft className="text-xl text-white" />
           </button>
         </div>
 

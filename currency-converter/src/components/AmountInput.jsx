@@ -28,7 +28,7 @@ const Currencydropdown = ({
           >
 
             {/* Favorites */}
-            
+
             {favorites.map((curr) => (
               <option className="bg-gray-200" value={curr} key={curr}>
                 <img

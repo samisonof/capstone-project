@@ -9,7 +9,7 @@ const Currencydropdown = ({
   title = "",
   isDarkMode, // Receive the isDarkMode prop
 }) => {
-  const isFavorite = (curr) => favorites.includes(curr);
+  const isFavorite = (currency) => favorites.includes(currency);
 
   return (
     <div>
@@ -29,29 +29,20 @@ const Currencydropdown = ({
 
             {/* Favorites */}
 
-            {favorites.map((curr) => (
-              <option className="bg-gray-200" value={curr} key={curr}>
-                <img
-                  src={`https://flagcdn.com/${curr.toLowerCase()}.svg`}
-                  alt={`${curr} flag`}
-                  style={{ width: "20px", marginRight: "8px" }}
-                />
-                {curr}
+            {favorites.map((currency) => (
+              <option className="bg-gray-200" value={currency} key={currency}>
+                {currency}
               </option>
             ))}
+            
             <hr />
 
             {/* Remaining currencies */}
             {currencies
               .filter((c) => !favorites.includes(c))
-              .map((curr) => (
-                <option value={curr} key={curr}>
-                  <img
-                    src={`https://flagcdn.com/${curr.toLowerCase()}.svg`}
-                    alt={`${curr} flag`}
-                    style={{ width: "20px", marginRight: "8px" }}
-                  />
-                  {curr}
+              .map((currency) => (
+                <option value={currency} key={currency}>
+                 {currency}
                 </option>
               ))}
           </select>
